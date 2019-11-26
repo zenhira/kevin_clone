@@ -1,0 +1,13 @@
+<%= form_for @twitter do |f| %>
+    <%= @twitter.content %>
+
+
+    <div class="actions">
+      <%= f.submit '投稿する' %>
+    </div>
+    <%= f.hidden_field :content %>
+
+    <div class="actions">
+      <%= f.submit '投稿画面に戻る', name: 'back' %>
+    </div>
+  <% end %>

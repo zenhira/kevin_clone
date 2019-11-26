@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inu</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div id="header">
+    <h1><img src="img/title.jpg" alt=""></h1>
+    <ul>
+    <li><a href="">link-a</a>｜<a href="">link-b</a></li>
+    </ul>
+</div>
+
+    <%= yield %>
+    <div id="footer">
+ <p>present by <a href="http://webch.org/" target="_blank">Layout Gallery</a>.
+ Copyright © Your Site Name. All rights reserved.</p>
+</div>
+
+  </body>
+</html>
