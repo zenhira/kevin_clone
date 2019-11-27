@@ -1,18 +1,13 @@
 class TwittersController < ApplicationController
   before_action :set_twitter, only: [:show, :edit, :update, :destroy]
 
-  # GET /twitters
-  # GET /twitters.json
   def index
     @twitters = Twitter.all
   end
 
-  # GET /twitters/1
-  # GET /twitters/1.json
   def show
   end
 
-  # GET /twitters/new
   def new
     @twitter = Twitter.new
   end
@@ -22,12 +17,9 @@ class TwittersController < ApplicationController
     render :new if @twitter.invalid?
   end
 
-  # GET /twitters/1/edit
   def edit
   end
 
-  # POST /twitters
-  # POST /twitters.json
   def create
     @twitter = Twitter.new(twitter_params)
 
@@ -42,8 +34,6 @@ class TwittersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /twitters/1
-  # PATCH/PUT /twitters/1.json
   def update
     respond_to do |format|
       if @twitter.update(twitter_params)
@@ -56,8 +46,6 @@ class TwittersController < ApplicationController
     end
   end
 
-  # DELETE /twitters/1
-  # DELETE /twitters/1.json
   def destroy
     @twitter.destroy
     respond_to do |format|
@@ -67,13 +55,11 @@ class TwittersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_twitter
-      @twitter = Twitter.find(params[:id])
-    end
+  def set_twitter
+    @twitter = Twitter.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def twitter_params
-      params.require(:twitter).permit(:content)
-    end
+  def twitter_params
+    params.require(:twitter).permit(:content)
+  end
 end
