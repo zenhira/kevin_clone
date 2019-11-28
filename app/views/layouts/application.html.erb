@@ -10,14 +10,19 @@
   </head>
 
   <body>
-  <div id="header">
-</div>
 
-    <%= yield %>
-    <div id="footer">
- <p>present by <a href="http://webch.org/" target="_blank">Layout Gallery</a>.
- Copyright © Your Site Name. All rights reserved.</p>
-</div>
+    <header>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+    
+    <footer>
+      <p>
+        present by <a href="http://webch.org/" target="_blank">Layout Gallery</a>.Copyright © Your Site Name. All rights reserved.
+      </p>
+    </footer>
 
   </body>
 </html>
