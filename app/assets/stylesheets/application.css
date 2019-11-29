@@ -22,29 +22,30 @@
       height: 30px;
       background-color:white;
    }
-   
+
    header h1 {
       margin:0;
    }
-   
+
    header ul {
       margin:0;
       padding:8px 10px 3px 10px;
       font-size:70%;
       text-align:right;
    }
-   
+
    header li {
       margin:0 0 5px 0;
       line-height:1.32em;
    }
-   
+
    header img {
       float:left;
    }
 
    main {
       margin-top:30px;
+      text-align:center;
    }
 
    footer {
@@ -54,40 +55,36 @@
       position: absolute;
       bottom: 0;
    }
-   
+
    footer a {
       color:#fff;
       text-decoration:none;
    }
-   
+
    footer p {
       margin:0;
       padding:3px 5px;
       color:turquoise;
       background:white;
       font-size:65%;
-      text-align:right;
+      text-align:center;
       line-height:1.32em;
       font-family:verdana;
    }
-   
+
    footer div {
       padding:10px;
       background:#eeeeff;
       color:#333366;
       font-size:70%;
-      border-bottom:1px solid #ccc;	
+      border-bottom:1px solid #ccc;
    }
-   
+
    footer div a {
       color:#3366cc;
       text-decoration:none;
    }
-   
+
    footer div a:hover {
       color:white;
    }
-   
-   /* #notice {
-      padding: 30px;
-   }  */
