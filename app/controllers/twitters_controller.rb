@@ -22,15 +22,13 @@ class TwittersController < ApplicationController
 
   def create
     @twitter = Twitter.new(twitter_params)
+    if params[:back]
+          render :new
+        elsif @twitter.save
+          redirect_to @twitter, notice: 'Twitter was successfully created.'
+        else
+          render :new
 
-    respond_to do |format|
-      if @twitter.save
-        format.html { redirect_to @twitter, notice: 'Twitter was successfully created.' }
-        format.json { render :show, status: :created, location: @twitter }
-      else
-        format.html { render :new }
-        format.json { render json: @twitter.errors, status: :unprocessable_entity }
-      end
     end
   end
 
